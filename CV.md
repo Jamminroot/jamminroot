@@ -1,71 +1,60 @@
 ## Recent activity (last 12 months)
 
-*Auto-generated weekly from commit history · updated 2026-08-10*
+*Auto-generated weekly from commit history · updated 2026-08-17*
 
-Over the past year, I focused heavily on building and refining Summit, a SaaS crypto algorithmic trading platform with AI and neural network components, implementing UI features like hold-to-confirm and admin page headers. I also advanced j-uni-hid, a feature-rich USB HID firmware for ESP32-S3, adding event-driven capabilities and matrix support. In parallel, I worked on several secondary projects including a crypto model research tool, a poker computer vision system, a Windows file tagger (intag2), and various automation and utility tools like jolt (AutoHotKey alternative) and blackboard-launcher (E Ink note-taking launcher).
+I've been deeply focused on two major projects. First, building Summit—a full SaaS crypto algo-trading platform with AI and neural-network components—where I've been working across the entire stack: the trading engine, risk management, onboarding, admin panels, charting, and a Telegram-based auth flow. The recent weeks saw a large refactor of the guard/protection system, consolidating risk settings into a universal catalogue, adding account-wide loss budgets, and giving strategies their own timing overrides. Second, I've been developing J-UNI-HID, a feature-rich mouse and keyboard emulation firmware for the ESP32-S3, pushing through multiple firmware variants (v10–v13) with USB/BLE hybrid support, touch on Android, and mouse on macOS. On the side, I've contributed to the input-driver project—a Windows KMDF input filter driver for capture and injection—and to crypto-model-research, where I've been iterating on a price-prediction model, moving from experiment tracking to forward-testing and ONNX deployment. Other notable work includes revamping the Intag2 file-tagging utility for Windows Explorer with Vorbis comments and CI/CD pipeline fixes, building out the OzWil Android app (an LLM with phone-use capabilities) with sub-agent tool execution and model routing, and tangentially maintaining projects like J-TTS Android (multi-engine TTS), poker-cv (computer vision for poker hand detection), and the jamminroot meta-repo (CV generation pipeline).
 > **2026 Aug**
 >
-> - **Refactored admin UI pages to use shared PageHeader component** *(summit)* — Unified title rendering across 10+ admin detail pages by adopting a reusable PageHeader component.
-> - **Replaced native confirm dialogs with custom HoldToConfirm component** *(summit)* — Implemented a press-and-hold pattern for destructive confirmations to improve UX consistency.
-> - **Refactored currency formatting to use shared formatPoints utility** *(summit)* — Delegated money string formatting to a centralized fmtUSD/formatPnl helper.
+> - **Trading platform risk and onboarding** *(summit)* — Refactored the guard/protection system into a universal catalogue; added account-wide loss budgeting and strategy-level timing overrides; built risk slider onboarding and Telegram-based sign-in flow.
+> - **Distributed agent worker tooling** *(agent-harness)* — Built a macOS personal agent with UI tree reading, screenshot capture, device control, and Screen Recording permissions—runs as a login agent.
 
 > **2026 Jul**
 >
-> - **Worked on the personal C++ project named input-driver** *(input-driver)* — Inferred from project name and language: developed a low-level input driver in C.
-> - **Worked on the personal Kotlin project named j-tts-android** *(j-tts-android)* — Inferred from project name and language: developed a text-to-speech Android application in Kotlin.
-> - **Worked on the personal Kotlin project named ozwil-android** *(ozwil-android)* — Inferred from project name and language: developed an Android application in Kotlin.
+> - **Price prediction model productionization** *(crypto-model-research)* — Forward-tested and validated a 13-feature champion model achieving 77-90% WR; exported the Split-MoE ensemble to ONNX for integration with Summit.
+> - **File tagging utility for Windows Explorer** *(intag2)* — Added Vorbis comment writing for .ogg/.oga/.opus files; fixed silent metadata write failures and shell extension uninstall paths; collapsed CI into single workflow and bumped version to 2.5.
 
 > **2026 Jun**
 >
-> - **Added opt-in debug logging and fixed WinAPI hotkey threading** *(jolt)* — Implemented jolt.ini debug flag for logging and ensured hotkey conditions evaluate off the UI thread.
-> - **Built scenario engine with typed actions and interception support** *(jolt)* — Created a rule-based automation engine supporting conditions, themes, sound actions, and input gating.
-> - **Improved LLM prompt handling and repo filtering in personal profile** *(jamminroot)* — Refined LLM output voice enforcement, added private repo handling, and enhanced diagnostics logging.
+> - **CV generation pipeline automation** *(jamminroot)* — Revised the CV-generation pipeline with first-person voice enforcement, LLM model override support, and improved PDF output with skills section and role breakdowns.
+> - **Lightweight input automation tool** *(jolt)* — Built a minimal AutoHotKey alternative with a scenario engine, rule-based conditions, stateless themes, sound actions, and Interception support for input gate.
 
 > **2026 May**
 >
-> - **Added fire-and-forget event emission and 8x8 matrix variant** *(j-uni-hid)* — Extended USB HID firmware with non-blocking event emission and a new matrix hardware variant.
-> - **Implemented Knowledge Base app and FB2 reader for e-ink firmware** *(biscuit)* — Added a knowledge base with taxonomy browser, FB2 ebook support, and screensaver folder to the xteink firmware.
+> - **Firmware variants for ESP32-S3** *(j-uni-hid)* — Pushed v13 firmware with fire-and-forget USB HID events and 8x8 matrix variant; fixed DC disconnection and added graceful COM restart for the dual-core v12 release.
+> - **Windows input filter driver** *(input-driver)* — Released v1.2.2 of the KMDF input driver with an integration-test runner, push-style event delivery API, and SDDL relaxation for Interactive Users.
+> - **Multi-engine Android TTS app** *(j-tts-android)* — Added pitch and speed sliders, question/exclamation intonation control, wired Vosk + Silero with endpoint quality tuning, and integrated TeraTTS and Piper engines with Kotlin G2P.
 
 > **2026 Apr**
 >
-> - **Added YOLO confidence threshold UI and USB-HID runtime fallback** *(poker-cv)* — Implemented sensitivity control via confidence slider and automatic fallback from Interception to USB-HID.
-> - **Built map renderer and knowledge base app for Papyrix firmware** *(papyrix)* — Optimized map rendering for Apple Silicon, added grayscale tile server, and created a knowledge base with taxonomy navigation.
-> - **Developed blackboard launcher with swipe navigation and status bar control** *(blackboard-launcher)* — Created an E Ink-focused Android launcher with note-taking emphasis, gesture zones, and Onyx SDK integration.
-> - **Updated FlClash with XHTTP transport support via rebased Mihomo** *(FlCLash)* — Bumped Clash.Meta to re-expose proxy APIs and added XHTTP transport support.
+> - **E-ink reader custom firmware** *(papyrix)* — Added Knowledge Base, Map app, and FB2 encoding support to the Papyrix fork; optimized map rendering for Apple Silicon and built tile and book processing scripts.
+> - **VR aim-assist and overlay tool** *(MEMU3)* — Reworked the aim-assist module with YOLO confidence thresholds, DirectML GPU inference, and USB-HID fallback; rewrote overlay using D3D11 + DComp.
 
 > **2026 Mar**
 >
-> - **Restricted aim assist to focused monitor window and fixed autofire pause** *(poker-cv)* — Ensured aim assist only activates on the scan monitor's focused window and autofire respects app pause state.
-> - **Persisted mode and autofire state across restarts** *(poker-cv)* — Added state persistence for application mode and autofire toggle.
-> - **Added fuzzy stop sequence matching and streaming leak fix** *(intag2)* — Implemented edit-distance-based stop sequence matching and fixed streaming token leak by buffering partial sequences.
-> - **Integrated MarkdownText component and tool confirmation dialogs** *(intag2)* — Enhanced chat UI with Markdown rendering and added confirmation dialogs for tool actions.
+> - **LLM phone-use agent app** *(ozwil-android)* — Rewrote the sub-agent architecture with session-based delegation and tool execution; added model routing strategies, questionnaire-based setup wizard, and background service with wake detection.
+> - **Crypto price model experiments** *(crypto-model-research)* — Ran 11+ experiments including FFT frequency decomposition for MoE gates, snapshot ensembles, and variable selection—split up/down MoE gates became the new champion.
+> - **Knowledge base and map features for e-reader** *(papyrix)* — Added FB2 encoding support (windows-1251/KOI8-R), context menu for file deletion, and a landscape Map app with tile viewer and region selection.
 
 > **2026 Feb**
 >
-> - **Added multi-select mark mode and batch delete for YOLO labeler** *(yolo-labeler)* — Implemented mark mode for selecting multiple labels and batch deletion/clearing.
-> - **Fixed cache KeyError and added Ctrl+Delete deletion with flexible YAML** *(yolo-labeler)* — Resolved cache issue on save, added keyboard shortcut for entry deletion, and improved YAML resolution.
-> - **Added retry logic and fixed npm 403 errors in n8n node CI** *(n8n-nodes-telepilot-2)* — Improved CI reliability with retry for n8n install and removed stale npm config causing registry errors.
-> - **Initialized dotfiles with SSH keys and chezmoi configuration** *(dotfiles)* — Set up chezmoi-managed dotfiles including bashrc, bash_profile, and age-encrypted SSH keys.
+> - **Windows file tagging utility v2 release** *(intag2)* — Prepared v2.4–2.5 releases with MS Store CI pipeline, CLI support, folder tag editing, and PDF context menu support; restructured CI workflows for manual triggering and auto-drafting releases.
+> - **Graph-powered code intelligence engine** *(jaxon)* — Added LSP integration for language-server-powered analysis, incremental index sync, expanded DI registration detection, and dead code analysis for C++, Go, Rust, and Svelte.
+> - **Neovim dotfiles and secret management** *(.dotfiles)* — Set up a full Neovim IDE configuration with LSP, Treesitter, Mason, and telescope; added pre-commit hooks for secret detection and SSH key management via chezmoi.
+> - **Telegram bot n8n node fixes** *(n8n-nodes-telepilot-2)* — Fixed auth race conditions, upgraded CI to n8n 2.8.3, and added a new album trigger for the Telegram pilot node.
 
 > **2026 Jan**
 >
-> - **Fixed abort controller cleanup and updated Claude Agent SDK** *(n8n-nodes-claudecode)* — Resolved abort controller lifecycle issue after query completion and migrated to Claude Agent SDK v0.2.12.
-> - **Improved tasker UX with direct launch and touch event visualization** *(tasker)* — Enhanced sensor chart interaction with touch event visualization and direct app launch capability.
-> - **Added fire-and-forget event emission for USB HID firmware** *(j-uni-hid)* — Implemented non-blocking event emission to improve responsiveness in USB HID communication.
-
-> **2025 Dec**
->
-> - **Migrated n8n node to Claude Agent SDK and added Haiku model support** *(n8n-nodes-claudecode)* — Updated the n8n node to use the official Claude Agent SDK and added support for the Haiku model.
+> - **Firmware v11 for ESP32-S3** *(j-uni-hid)* — Developed v11 firmware with self-reporting, configurable performance profiles, safe BLE pairing, and reduced heat via throttling; fixed Android reconnect and touch jitter issues.
+> - **Poker hand detection via computer vision** *(poker-cv)* — Built a CV pipeline for online poker platforms; achieved 99% hand detection and 97.8% board card accuracy with state recovery, log reconstruction, and validation metrics.
+> - **Telegram bot for Claude Code** *(n8n-nodes-claudecode)* — Migrated to the Claude Agent SDK, added Haiku model support, and fixed abort controller cleanup for the n8n Claude Code node.
 
 > **2025**
 >
-> - **Updated PowerShell profile with new aliases and functions** *(powershell_profile)* — Maintained personal PowerShell profile with incremental improvements.
-> - **Developed Telegram bot for content collection with ad filtering** *(jContentCollector)* — Built a C# Telegram bot that collects content from channels, filters ads, and sends via webhook.
-> - **Created Telegram trading bot with Docker support and CORS configuration** *(freqtrade-tg-multibot)* — Developed a C# Telegram bot for Freqtrade with web application, Docker deployment, and enhanced authentication.
-> - **Built Telegram assistant with API credentials and Serilog logging** *(pAssistant2)* — Created a C# Telegram assistant with secure API credential handling and structured logging.
-> - **Initialized Freqtrade user data with custom loss functions** *(freqtrade_user_data)* — Set up Freqtrade trading bot configuration with custom loss functions for strategy optimization.
-> - **Updated ChatGPT Telegram bot with new features** *(chatgpt_telegram_net)* — Maintained a .NET-based ChatGPT Telegram bot with incremental updates.
+> - **Trading bot monitoring and strategies** *(freqtrade-tg-multibot)* — Worked on a Telegram-based multi-bot monitoring dashboard for Freqtrade—improved authentication, daily profit calculations, and Docker/web deployment setup.
+> - **Telegram content collector and multi-target sending** *(pAssistant)* — Maintained a Telegram automation tool; added multi-target channel sending for separating memes and news, image deduplication, and summarization features for repost indices.
+> - **Auto-coding agent with git workflow automation** *(auto-claude)* — Built an autonomous multi-session AI coding agent; implemented squash merging, git rules system, task ID tracking, and completion detection across worktrees.
+> - **Trading strategies development and optimization** *(freqtrade_startegies)* — Developed multiple cryptocurrency trading strategies (EwoDip15m series, PackRelReversion15m, BtcRelReversion15m) with backtesting and forward-test results achieving 73-78% win rates.
 
 > **2024**
 >
-> - **Initialized personal profile repository with basic structure** *(jamminroot)* — Created the initial commit for the personal GitHub profile repository.
+> - **Telegram bot foundations and refactoring** *(pAssistant)* — Continued maintenance on the Telegram assistant bot—added content forwarding fixes, session state handling, and minor refactoring across the pipeline.

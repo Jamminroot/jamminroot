@@ -4,6 +4,7 @@
   "Jamminroot/CryptoSignalerBot": "Telegram bot for crypto signal aggregation and AI processing.",
   "Jamminroot/FlCLash": "Flutter Clash client with XHTTP transport support.",
   "Jamminroot/MEMU3": "R&D project for computer vision, input emulation, overlays, and screen capture.",
+  "Jamminroot/agent-harness": "Rust tool that controls macOS via UI tree and screen capture.",
   "Jamminroot/apollo_server": "Experimental C++ server project.",
   "Jamminroot/auto-claude": "Autonomous multi-session AI coding tool.",
   "Jamminroot/biscuit": "Expanded biscuit firmware for xteink with knowledge base app.",
