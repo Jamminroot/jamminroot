@@ -1,19 +1,24 @@
 {
-  "generatedAt": "2026-08-17",
-  "summary": "I've been deeply focused on two major projects. First, building Summit—a full SaaS crypto algo-trading platform with AI and neural-network components—where I've been working across the entire stack: the trading engine, risk management, onboarding, admin panels, charting, and a Telegram-based auth flow. The recent weeks saw a large refactor of the guard/protection system, consolidating risk settings into a universal catalogue, adding account-wide loss budgets, and giving strategies their own timing overrides. Second, I've been developing J-UNI-HID, a feature-rich mouse and keyboard emulation firmware for the ESP32-S3, pushing through multiple firmware variants (v10–v13) with USB/BLE hybrid support, touch on Android, and mouse on macOS. On the side, I've contributed to the input-driver project—a Windows KMDF input filter driver for capture and injection—and to crypto-model-research, where I've been iterating on a price-prediction model, moving from experiment tracking to forward-testing and ONNX deployment. Other notable work includes revamping the Intag2 file-tagging utility for Windows Explorer with Vorbis comments and CI/CD pipeline fixes, building out the OzWil Android app (an LLM with phone-use capabilities) with sub-agent tool execution and model routing, and tangentially maintaining projects like J-TTS Android (multi-engine TTS), poker-cv (computer vision for poker hand detection), and the jamminroot meta-repo (CV generation pipeline).",
+  "generatedAt": "2026-08-24",
+  "summary": "I built and iterated on Summit, a SaaS crypto algo trading platform with AI/neural network components, adding notification infrastructure, wallet group features, and prediction research while performing large-scale refactoring and release management. I developed firmware for USB HID emulation on ESP32-S3, progressing through multiple versions with features like fire-and-forget event emitting and matrix variants, and built a Windows input filter/injection driver from scratch with push-style event delivery and integration testing.\n\nIn parallel, I conducted extensive research on crypto price prediction models, testing cross-pair generalization and drift detection, and developed an Android TTS app with multiple engine support. I built the OzWil LLM-powered phone assistant with sub-agent delegation, and created the JAW agentic worker framework with Telegram integration and memory management. I maintained the intag2 Windows file-tagging utility, worked on poker CV analysis, trading strategies for Freqtrade, and various e-ink firmware projects.\n\nEarlier in the window, I developed an autonomous coding agent (auto-claude), a Telegram multi-bot for Freqtrade monitoring, and a personal assistant bot, along with a Flutter app for trading bot monitoring.",
   "periods": [
     {
       "period": "2026 Aug",
       "items": [
         {
-          "title": "Trading platform risk and onboarding",
+          "title": "Summit platform development",
           "repo": "Jamminroot/summit",
-          "description": "Refactored the guard/protection system into a universal catalogue; added account-wide loss budgeting and strategy-level timing overrides; built risk slider onboarding and Telegram-based sign-in flow."
+          "description": "Built notification infrastructure, wallet group features, and prediction research for the Summit crypto algo trading platform; performed large-scale refactoring and release management."
         },
         {
-          "title": "Distributed agent worker tooling",
+          "title": "Crypto prediction model research",
+          "repo": "Jamminroot/crypto-model-research",
+          "description": "Conducted research on crypto price prediction models: tested cross-pair generalization, drift detection, and meta-logreg filtering; maintained live paper trading."
+        },
+        {
+          "title": "JAW agentic worker",
           "repo": "Jamminroot/agent-harness",
-          "description": "Built a macOS personal agent with UI tree reading, screenshot capture, device control, and Screen Recording permissions—runs as a login agent."
+          "description": "Built the JAW agentic worker: implemented Telegram threading, memory management, workflow presets, and a graphical control room."
         }
       ]
     },
@@ -21,14 +26,14 @@
       "period": "2026 Jul",
       "items": [
         {
-          "title": "Price prediction model productionization",
-          "repo": "Jamminroot/crypto-model-research",
-          "description": "Forward-tested and validated a 13-feature champion model achieving 77-90% WR; exported the Split-MoE ensemble to ONNX for integration with Summit."
+          "title": "intag2 maintenance",
+          "repo": "Jamminroot/intag2",
+          "description": "Fixed metadata write errors, added Vorbis comment support for audio files, and improved CI pipeline for the Windows Explorer file-tagging utility."
         },
         {
-          "title": "File tagging utility for Windows Explorer",
-          "repo": "Jamminroot/intag2",
-          "description": "Added Vorbis comment writing for .ogg/.oga/.opus files; fixed silent metadata write failures and shell extension uninstall paths; collapsed CI into single workflow and bumped version to 2.5."
+          "title": "Freqtrade strategy development",
+          "repo": "Jamminroot/freqtrade_startegies",
+          "description": "Developed new trading strategies: pack-relative reversion and BTC-relative-strength variants with backtesting results."
         }
       ]
     },
@@ -36,14 +41,19 @@
       "period": "2026 Jun",
       "items": [
         {
-          "title": "CV generation pipeline automation",
+          "title": "CV generation tool enhancements",
           "repo": "Jamminroot/jamminroot",
-          "description": "Revised the CV-generation pipeline with first-person voice enforcement, LLM model override support, and improved PDF output with skills section and role breakdowns."
+          "description": "Enhanced the personal CV generation tool: added skills section, improved heatmap and timeline rendering, and refined LLM prompts."
         },
         {
-          "title": "Lightweight input automation tool",
+          "title": "EwoDip strategy variants",
+          "repo": "Jamminroot/freqtrade_startegies",
+          "description": "Developed EwoDip15m trading strategy variants with DCA and trend regime guards."
+        },
+        {
+          "title": "jolt automation tool",
           "repo": "Jamminroot/jolt",
-          "description": "Built a minimal AutoHotKey alternative with a scenario engine, rule-based conditions, stateless themes, sound actions, and Interception support for input gate."
+          "description": "Built the jolt automation tool: implemented scenario engine with typed actions, conditions, and stateless themes."
         }
       ]
     },
@@ -51,19 +61,39 @@
       "period": "2026 May",
       "items": [
         {
-          "title": "Firmware variants for ESP32-S3",
+          "title": "USB HID firmware v13",
           "repo": "Jamminroot/j-uni-hid",
-          "description": "Pushed v13 firmware with fire-and-forget USB HID events and 8x8 matrix variant; fixed DC disconnection and added graceful COM restart for the dual-core v12 release."
+          "description": "Developed firmware for USB HID emulation on ESP32-S3: added fire-and-forget event emitting, 8x8 matrix variant, and platformio support."
         },
         {
-          "title": "Windows input filter driver",
+          "title": "Windows input driver",
           "repo": "Jamminroot/input-driver",
-          "description": "Released v1.2.2 of the KMDF input driver with an integration-test runner, push-style event delivery API, and SDDL relaxation for Interactive Users."
+          "description": "Built a Windows input filter/injection driver: implemented push-style event delivery, integration test runner, and per-event blocking."
         },
         {
-          "title": "Multi-engine Android TTS app",
+          "title": "intag2 encoding fix",
+          "repo": "Jamminroot/intag2",
+          "description": "Fixed desktop.ini encoding for non-ASCII characters in the file-tagging utility."
+        },
+        {
+          "title": "Android TTS app",
           "repo": "Jamminroot/j-tts-android",
-          "description": "Added pitch and speed sliders, question/exclamation intonation control, wired Vosk + Silero with endpoint quality tuning, and integrated TeraTTS and Piper engines with Kotlin G2P."
+          "description": "Developed Android TTS app: integrated multiple TTS engines, added pitch control, and improved text normalization."
+        },
+        {
+          "title": "CV tool project cards",
+          "repo": "Jamminroot/jamminroot",
+          "description": "Added project cards with pulse charts and improved workflow rebase retries to the CV generation tool."
+        },
+        {
+          "title": "MEMU3 computer vision",
+          "repo": "Jamminroot/MEMU3",
+          "description": "Switched YOLO inference to DirectML, implemented bow/flick tracking with user-input compensation."
+        },
+        {
+          "title": "biscuit e-ink firmware",
+          "repo": "Jamminroot/biscuit",
+          "description": "Added Knowledge Base app and FB2 reader to the biscuit e-ink firmware."
         }
       ]
     },
@@ -71,14 +101,34 @@
       "period": "2026 Apr",
       "items": [
         {
-          "title": "E-ink reader custom firmware",
-          "repo": "Jamminroot/papyrix",
-          "description": "Added Knowledge Base, Map app, and FB2 encoding support to the Papyrix fork; optimized map rendering for Apple Silicon and built tile and book processing scripts."
+          "title": "Firmware variant and fixes",
+          "repo": "Jamminroot/j-uni-hid",
+          "description": "Drafted new firmware variant and fixed device disconnection issues for the USB HID emulation project."
         },
         {
-          "title": "VR aim-assist and overlay tool",
+          "title": "Changelog fix",
+          "repo": "Jamminroot/intag2",
+          "description": "Fixed changelog generation in the intag2 release workflow."
+        },
+        {
+          "title": "papyrix firmware features",
+          "repo": "Jamminroot/papyrix",
+          "description": "Added map app with tile viewer, knowledge base with taxonomy browser, and optimized rendering for Apple Silicon on the e-ink device firmware."
+        },
+        {
+          "title": "Aim assist enhancements",
           "repo": "Jamminroot/MEMU3",
-          "description": "Reworked the aim-assist module with YOLO confidence thresholds, DirectML GPU inference, and USB-HID fallback; rewrote overlay using D3D11 + DComp."
+          "description": "Enhanced MEMU3 aim assist: added HP-based aim scaling and debug overlay window."
+        },
+        {
+          "title": "FlCLash proxy update",
+          "repo": "Jamminroot/FlCLash",
+          "description": "Updated FlCLash proxy client: bumped Clash.Meta version and added XHTTP transport support."
+        },
+        {
+          "title": "Clash.Meta API exposure",
+          "repo": "Jamminroot/Clash.Meta",
+          "description": "Re-exposed ProxiesWithProviders and GetProxyNameList APIs in the Clash.Meta fork."
         }
       ]
     },
@@ -86,64 +136,44 @@
       "period": "2026 Mar",
       "items": [
         {
-          "title": "LLM phone-use agent app",
-          "repo": "Jamminroot/ozwil-android",
-          "description": "Rewrote the sub-agent architecture with session-based delegation and tool execution; added model routing strategies, questionnaire-based setup wizard, and background service with wake detection."
-        },
-        {
-          "title": "Crypto price model experiments",
-          "repo": "Jamminroot/crypto-model-research",
-          "description": "Ran 11+ experiments including FFT frequency decomposition for MoE gates, snapshot ensembles, and variable selection—split up/down MoE gates became the new champion."
-        },
-        {
-          "title": "Knowledge base and map features for e-reader",
-          "repo": "Jamminroot/papyrix",
-          "description": "Added FB2 encoding support (windows-1251/KOI8-R), context menu for file deletion, and a landscape Map app with tile viewer and region selection."
-        }
-      ]
-    },
-    {
-      "period": "2026 Feb",
-      "items": [
-        {
-          "title": "Windows file tagging utility v2 release",
-          "repo": "Jamminroot/intag2",
-          "description": "Prepared v2.4–2.5 releases with MS Store CI pipeline, CLI support, folder tag editing, and PDF context menu support; restructured CI workflows for manual triggering and auto-drafting releases."
-        },
-        {
-          "title": "Graph-powered code intelligence engine",
-          "repo": "Jamminroot/jaxon",
-          "description": "Added LSP integration for language-server-powered analysis, incremental index sync, expanded DI registration detection, and dead code analysis for C++, Go, Rust, and Svelte."
-        },
-        {
-          "title": "Neovim dotfiles and secret management",
-          "repo": "Jamminroot/.dotfiles",
-          "description": "Set up a full Neovim IDE configuration with LSP, Treesitter, Mason, and telescope; added pre-commit hooks for secret detection and SSH key management via chezmoi."
-        },
-        {
-          "title": "Telegram bot n8n node fixes",
-          "repo": "Jamminroot/n8n-nodes-telepilot-2",
-          "description": "Fixed auth race conditions, upgraded CI to n8n 2.8.3, and added a new album trigger for the Telegram pilot node."
-        }
-      ]
-    },
-    {
-      "period": "2026 Jan",
-      "items": [
-        {
-          "title": "Firmware v11 for ESP32-S3",
+          "title": "Firmware v12/v13 release",
           "repo": "Jamminroot/j-uni-hid",
-          "description": "Developed v11 firmware with self-reporting, configurable performance profiles, safe BLE pairing, and reduced heat via throttling; fixed Android reconnect and touch jitter issues."
+          "description": "Released v12 and v13 firmware versions for USB HID emulation on ESP32-S3."
         },
         {
-          "title": "Poker hand detection via computer vision",
+          "title": "OzWil LLM app",
+          "repo": "Jamminroot/ozwil-android",
+          "description": "Developed OzWil Android app: implemented sub-agent delegation architecture, model settings UI, and background service for LLM inference."
+        },
+        {
+          "title": "OzWil API backend",
+          "repo": "Jamminroot/ozwil-api",
+          "description": "Built the OzWil API backend: added tool safety rails and MarkdownText composable for chat UI."
+        },
+        {
+          "title": "Map app and FB2 support",
+          "repo": "Jamminroot/papyrix",
+          "description": "Added map app with landscape UI and fixed FB2 encoding support for the papyrix firmware."
+        },
+        {
+          "title": "Overlay rewrite and linger mode",
+          "repo": "Jamminroot/MEMU3",
+          "description": "Rewrote MEMU3 overlay using D3D11/D2D/DComp, added linger mode and autofire features."
+        },
+        {
+          "title": "Blackboard launcher",
+          "repo": "Jamminroot/blackboard-launcher",
+          "description": "Improved Blackboard launcher for E-ink devices: overhauled backdrop, added swipe page navigation, and status bar control."
+        }
+      ]
+    },
+    {
+      "period": "2026",
+      "items": [
+        {
+          "title": "Poker CV analysis",
           "repo": "Jamminroot/poker-cv",
-          "description": "Built a CV pipeline for online poker platforms; achieved 99% hand detection and 97.8% board card accuracy with state recovery, log reconstruction, and validation metrics."
-        },
-        {
-          "title": "Telegram bot for Claude Code",
-          "repo": "Jamminroot/n8n-nodes-claudecode",
-          "description": "Migrated to the Claude Agent SDK, added Haiku model support, and fixed abort controller cleanup for the n8n Claude Code node."
+          "description": "Worked on computer vision analysis for online poker: achieved high hand detection accuracy, implemented state recovery, and built a pipeline for video-to-hand-history conversion."
         }
       ]
     },
@@ -151,24 +181,24 @@
       "period": "2025",
       "items": [
         {
-          "title": "Trading bot monitoring and strategies",
+          "title": "Telegram multi-bot for Freqtrade",
           "repo": "Jamminroot/freqtrade-tg-multibot",
-          "description": "Worked on a Telegram-based multi-bot monitoring dashboard for Freqtrade—improved authentication, daily profit calculations, and Docker/web deployment setup."
+          "description": "Built a Telegram multi-bot for monitoring multiple Freqtrade instances: implemented authentication, daily profit calculations, and Docker deployment."
         },
         {
-          "title": "Telegram content collector and multi-target sending",
-          "repo": "Jamminroot/pAssistant",
-          "description": "Maintained a Telegram automation tool; added multi-target channel sending for separating memes and news, image deduplication, and summarization features for repost indices."
-        },
-        {
-          "title": "Auto-coding agent with git workflow automation",
+          "title": "Auto-claude coding agent",
           "repo": "Jamminroot/auto-claude",
-          "description": "Built an autonomous multi-session AI coding agent; implemented squash merging, git rules system, task ID tracking, and completion detection across worktrees."
+          "description": "Developed an autonomous multi-session AI coding agent: added squash merging, git rules system, and task management UI."
         },
         {
-          "title": "Trading strategies development and optimization",
-          "repo": "Jamminroot/freqtrade_startegies",
-          "description": "Developed multiple cryptocurrency trading strategies (EwoDip15m series, PackRelReversion15m, BtcRelReversion15m) with backtesting and forward-test results achieving 73-78% win rates."
+          "title": "pAssistant Telegram bot",
+          "repo": "Jamminroot/pAssistant",
+          "description": "Maintained a personal Telegram assistant bot: added summarization, multi-target sending, and image deduplication features."
+        },
+        {
+          "title": "Freqtrade monitor app",
+          "repo": "Jamminroot/freqtrade_monitor",
+          "description": "Built a Flutter app for monitoring Freqtrade trading bots: implemented profit charts, card UI, and import/export settings."
         }
       ]
     },
@@ -176,9 +206,9 @@
       "period": "2024",
       "items": [
         {
-          "title": "Telegram bot foundations and refactoring",
+          "title": "pAssistant early development",
           "repo": "Jamminroot/pAssistant",
-          "description": "Continued maintenance on the Telegram assistant bot—added content forwarding fixes, session state handling, and minor refactoring across the pipeline."
+          "description": "Initial development of the personal Telegram assistant bot: implemented logging, error handling, and content forwarding."
         }
       ]
     }
