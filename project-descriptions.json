@@ -38,6 +38,7 @@
   "Jamminroot/poker-cv": "Computer vision experiments for online poker platforms.",
   "Jamminroot/powershell_profile": "Personal PowerShell profile configuration.",
   "Jamminroot/summit": "SaaS crypto algorithmic trading platform with AI and neural network components.",
+  "Jamminroot/sunflower": "A Go-based tool that provides a browser interface inside another browser.",
   "Jamminroot/tasker": "Android task management app with touch event visualization.",
   "Jamminroot/yolo-labeler": "Simple on-host YOLO labeling tool for personal projects."
 }
