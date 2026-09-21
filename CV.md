@@ -1,85 +1,64 @@
 ## Recent activity (last 12 months)
 
-*Auto-generated weekly from commit history · updated 2026-09-07*
+*Auto-generated weekly from commit history · updated 2026-09-21*
 
-Built and reworked the core of the Summit crypto algo-trading platform, adding algorithmic copy-trading features, a calm-liquidity rebalancing system, and backtesting infrastructure. Investigated and fixed execution fallbacks, wallet-group vetoes, and Hyperliquid pair resolution.
+I continued building the Summit crypto algo trading platform, adding LLM-based judge seats for quorum and sentiment analysis, rebalancing logic, and copy trading features. The platform now integrates AI-driven decision-making with wallet group limits and proposal severity defaults. I also developed the j-uni-hid firmware for ESP32-S3, adding new device variants, USB HID improvements, and BLE performance profiles.
 
-Developed two new firmware variants for the j-uni-hid ESP32-S3 project (v12 dual-core, v13 USB HID), and shipped a Windows input filter/injection driver (KMDF) with event-level block, integration tests, and a library for high-level control. Also maintained the j-tts-android app, adding new TTS engines (F5-TTS, GPT-SoVITS scaffold) and pitch/speed controls.
+I created the input-driver Windows kernel-mode filter driver for input injection and capture, releasing v1.2 with push-style event delivery and integration tests. On the research side, I conducted extensive crypto price prediction model experiments, auditing defects and establishing a unified stack protocol for model ranking.
 
-Researched crypto price prediction models in the crypto-model-research project, conducting a systematic audit of 11 models, discarding a dozen speculative features, and building a unified benchmark. Refined the Sunflower browser-in-browser project with human-input planning, font-pack handling, and deploy infrastructure.
+I built the JAW agentic worker framework with Mattermost integration and tenant visibility, and the sunflower browser-in-browser infrastructure with permission handling and human input simulation. I worked on several Android projects: the j-tts-android TTS engine with multiple model support and pitch control, and the ozwil-android on-device LLM app with sub-agent delegation and tool routing.
 
-Iterated on the intag2 Windows Explorer tagging tool, fixing settings persistence, adding Ogg Vorbis comment support, and overhauling CI/CD pipelines. Also worked on the OzWil Android LLM app, rewriting sub-agent architecture and adding KV cache reuse, and the agent-harness Rust project, introducing tenant workspaces, Telegram Secretary, and a graphical control panel.
+I maintained the intag2 Windows file-tagging utility, adding Vorbis comment support and fixing metadata persistence. I refined the poker-cv computer vision pipeline for online poker, achieving high hand detection accuracy, and developed trading strategies for freqtrade. I also improved my CV generation pipeline with better LLM guidance and project cards.
 > **2026 Sep**
 >
-> - **Summit backtest and configurator** *(summit)* — Built a backtest configurator and signal rebalance system with calm-liquidity baskets and paper-only signals for the SaaS crypto algo-trading platform.
-> - **Sunflower browser-in-browser fixes** *(sunflower)* — Fixed font-pack building, proxy password handling, and unlaunchable profiles in the browser-in-a-browser project.
+> - **AI-driven crypto algo trading platform** *(summit)* — Continued development of the Summit platform, focusing on LLM-based judge seats, quorum logic, and wallet group limits.
+> - **Agentic worker framework** *(agent-harness)* — Built out the Mattermost integration, process feed reading, and tenant visibility model for the JAW agentic worker.
+> - **Browser-in-browser infrastructure** *(sunflower)* — Fixed font pack issues, container adoption, and proxy password handling; added features for browser lifecycle management and font pack splitting.
 
 > **2026 Aug**
 >
-> - **Summit copy-trading features** *(summit)* — Reworked the copy-trading system: added honest cost estimates, trailing exit sliders, interactive exit simulators, and position peak backfill.
-> - **Summit rebalance wallet groups** *(summit)* — Implemented wallet-group veto persistence and calm-liquidity backtest replay on hourly bars for the algo-trading platform.
-> - **Crypto model research audit** *(crypto-model-research)* — Conducted a systematic model audit: unified stack protocol sweep, discarded a dozen speculative features, and built a frozen benchmark for the price prediction project.
-> - **Intag2 fixes and Vorbis support** *(intag2)* — Fixed settings persistence, Explorer refresh issues, and added Vorbis comment writing for audio files in the Windows file-tagging tool.
-> - **Sunflower human input planning** *(sunflower)* — Built gesture-based movement planning, permission prompt handling, and font-pack deployment in the browser-in-a-browser project.
-> - **Agent-harness workspace isolation** *(agent-harness)* — Added tenant workspaces, data streams, a graphical Mini App control room, and Telegram Secretary with role-aware controls to the agentic worker project.
+> - **Summit platform refinements** *(summit)* — Continued work on Summit: rebalance logic, copy trading fixes, and wallet group veto mechanics.
+> - **Crypto price prediction research** *(crypto-model-research)* — Conducted extensive model research: audited defects, unified stack protocol, and refit runbook for crypto price prediction.
+> - **Agent harness development** *(agent-harness)* — Developed the agent harness: private chat handling, notification following, and workspace build on Windows.
+> - **File-tagging utility maintenance** *(intag2)* — Maintained the Windows file-tagging utility: fixed settings persistence, Explorer refresh, and backdrop fallback.
+> - **Browser-in-browser enhancements** *(sunflower)* — Enhanced the browser-in-browser system: added permission prompt answering, human input planning, and deployment improvements.
+> - **Intag documentation updates** *(intag)* — Updated documentation and changelog for the intag file-tagging project.
 
 > **2026 Jul**
 >
-> - **Summit rebalance and follows work** *(summit)* — Refined the rebalance system with per-signal fanout and calm-liquidity silence handling, and improved the follows pages with exchange account management.
-> - **Freqtrade strategy additions** *(freqtrade_startegies)* — Added several new trading strategies: pack-relative reversion variants and a broad 50-pair universe champion, with forward-tested documentation.
+> - **Intag2 audio metadata support** *(intag2)* — Continued work on intag2: added Vorbis comment writing for audio files and fixed metadata write failures.
+> - **Trading strategy development** *(freqtrade_startegies)* — Developed new trading strategies: pack-relative reversion and BTC-relative reversion variants.
 
 > **2026 Jun**
 >
-> - **CV automation improvements** *(jamminroot)* — Reworked the CV generation pipeline: added LLM voice enforcement, skills section, and team/throughput metrics to the PDF output.
-> - **Jolt hotkey conditions** *(jolt)* — Extended the minimal AutoHotKey alternative with condition evaluation, stateless themes, sound actions, and a debug log.
+> - **CV pipeline improvements** *(jamminroot)* — Enhanced the CV generation pipeline: added LLM model override, improved voice enforcement, and split guidance per place.
+> - **Strategy iteration** *(freqtrade_startegies)* — Continued strategy development: added EwoDip15m variants with DCA and trend regime.
+> - **AutoHotKey alternative** *(jolt)* — Built the jolt AutoHotKey alternative: added conditions, rules, stateless themes, and sound actions.
 
 > **2026 May**
 >
-> - **J-uni-hid v13 firmware** *(j-uni-hid)* — Developed v13 firmware variant for ESP32-S3 with fire-and-forget event emitting and an 8x8 matrix configuration.
-> - **Input driver library and tests** *(input-driver)* — Built a library with start/stop event delivery, an integration-test runner covering all documented capabilities, and relaxed SDDL for the KMDF input driver.
-> - **J-TTS Android engine integration** *(j-tts-android)* — Integrated multiple TTS engines including F5-TTS, GPT-SoVITS, and sherpa-onnx with per-voice downloading, plus pitch control for VITS engines.
-> - **MEMU3 YOLO inference changes** *(MEMU3)* — Switched GPU inference from CUDA to DirectML, added closed-loop tracking flick and user-input compensation in the computer vision project.
-> - **Biscuit firmware expansion** *(biscuit)* — Added a knowledge base app, FB2 reader, screensaver folder, and Mesh Chat fixes to the e-ink device firmware.
-> - **CV PDF generation** *(jamminroot)* — Generated CV PDF with pulse charts and project cards, and refined the LLM coverage pipeline for mandatory repos.
+> - **ESP32-S3 firmware development** *(j-uni-hid)* — Developed firmware for ESP32-S3: added fire-and-forget USB HID events and 8x8 matrix variant.
+> - **Windows input filter driver** *(input-driver)* — Released v1.2 of the Windows input filter driver: added push-style event delivery and integration-test runner.
+> - **Android TTS engine** *(j-tts-android)* — Worked on Android TTS: added question/exclamation intonation, removed deprecated engines, and added pitch control.
+> - **CV pipeline enhancements** *(jamminroot)* — Continued CV pipeline work: added project cards with pulse charts and workflow rebase retries.
+> - **CV-based aim assist** *(MEMU3)* — Refined the CV-based aim assist: switched YOLO inference to DirectML, added bow/flick features, and improved overlay.
+> - **E-ink firmware update** *(biscuit)* — Added knowledge base and FB2 reader to the e-ink firmware.
 
 > **2026 Apr**
 >
-> - **J-uni-hid v13 variant and fixes** *(j-uni-hid)* — Drafted a new 8x8 matrix firmware variant and fixed disconnect issues in the v13 USB HID firmware.
-> - **Intag2 PDF support and CI** *(intag2)* — Added .pdf to supported file extensions for context menu and fixed changelog generation in the release workflow.
-> - **MEMU3 overlay and autofire** *(MEMU3)* — Rewrote the overlay to D3D11+D2D, added HP aim scaling and trigger gate on per-target YOLO confidence, and USB-HID fallback.
-> - **FlClash XHTTP support** *(FlClash)* — Added XHTTP transport support and bumped Clash.Meta to re-expose proxy APIs.
-> - **Papyrix map and home screen** *(papyrix)* — Added map app with tile viewer, knowledge base with taxonomy browser, and icon-based home screen to the e-ink firmware fork.
-
-> **2026 Mar**
->
-> - **J-uni-hid v12 firmware** *(j-uni-hid)* — Developed v12 dual-core firmware variant for the ESP32-S3 HID device.
-> - **OzWil Android sub-agent architecture** *(ozwil-android)* — Rewrote the sub-agent architecture with session-based delegation, added KV cache reuse, and built a questionnaire-based model recommendation wizard.
-> - **Blackboard launcher overhaul** *(blackboard-launcher)* — Overhauled the E-ink note-taking launcher: redesigned backdrop, added swipe page navigation, and fixed drawing lifecycle issues.
-> - **J-tts-android initial engine work** *(j-tts-android)* — Began initial TTS engine integration with contextual homograph disambiguation, endpoint calibration, and session caching.
-
-> **2026 Feb**
->
-> - **Intag2 CI pipeline restructuring** *(intag2)* — Restructured CI/CD pipelines for manual triggering and automatic tagging, fixed Store submission issues with PowerShell REST API rewrite.
-> - **Jaxon code intelligence engine** *(jaxon)* — Added LSP integration, dead code detection for interface implementations, and incremental sync with freshness detection to the code intelligence engine.
-> - **Neovim dotfile configuration** *(.dotfiles)* — Set up a full Neovim IDE configuration with LSP, treesitter, pre-commit hooks, and OSC 52 clipboard for remote sessions.
-> - **YOLO labeler creation** *(yolo-labeler)* — Built a fast on-host YOLO labeler with multi-select mark mode, flexible YAML resolution, and Ctrl+Delete entry deletion.
-
-> **2026**
->
-> - **Summit core and copy-trading** *(summit)* — Continued major work on the Summit algo-trading platform: built copy-trading features, rebalance systems, and algorithmic strategy catalog throughout the year.
-> - **J-uni-hid firmware development** *(j-uni-hid)* — Developed multiple firmware versions (v9-v13) for ESP32-S3 with BLE, USB touch, and performance mode features.
-> - **Crypto model research** *(crypto-model-research)* — Conducted extensive model research with a catalog of 11 models, unified protocol, and live-drift monitoring throughout the year.
-> - **OzWil Android app** *(ozwil-android)* — Built and refined the on-device LLM app with phone-use capabilities, sub-agent delegation, and multiple model support.
-> - **Intag2 and Intag tagging tools** *(intag2)* — Maintained the Windows Explorer file-tagging tools with metadata support, CI improvements, and Microsoft Store submission fixes.
-> - **Agent-harness Rust project** *(agent-harness)* — Developed the JAW agentic worker with Telegram integration, memory retrieval, and a graphical control panel.
-> - **N8n nodes and automations** *(n8n-nodes-telepilot-2)* — Fixed auth race conditions, upgraded CI, and added album trigger for Telegram node in n8n.
+> - **Firmware variant drafting** *(j-uni-hid)* — Continued firmware development: drafted v13s8x8 variant and fixed dying/disconnect issues.
+> - **Intag2 encoding fix** *(intag2)* — Fixed desktop.ini encoding for non-ASCII characters and updated changelog generation.
+> - **E-ink reader firmware** *(papyrix)* — Enhanced e-ink reader firmware: added map app with tile viewer, knowledge base app, and FB2 encoding fixes.
+> - **Clash.Meta fork** *(FlCLash)* — Updated Clash.Meta fork: re-exposed APIs and added XHTTP transport support.
+> - **Clash.Meta API exposure** *(Clash.Meta)* — Re-exposed APIs for FlClash.
 
 > **2025**
 >
-> - **Poker CV pet project** *(poker-cv)* — Built computer vision pipeline for online poker: hand detection, log reconstruction, and CV recovery module.
-> - **Freqtrade bot ecosystem** *(freqtrade-tg-multibot)* — Developed multi-bot Telegram management with Docker support, daily profit calculations, and authentication handling.
-> - **Auto-Claude multi-session AI** *(auto-claude)* — Implemented Git rules system, squash-merge completion tracking, and task ID management for the autonomous AI coding tool.
-> - **Android TTS and assistant tools** *(pAssistant)* — Maintained the personal Telegram assistant and pAssistant2 with summarization, image dedup, and multi-target sending.
-> - **Trading strategy development** *(freqtrade_startegies)* — Developed and optimized numerous trading strategies with backtesting and parameter tuning throughout the year.
-> - **J-tts-android initial release** *(j-tts-android)* — Initial TTS evaluation engine release with Vosk, Silero, and Piper engines for Russian speech synthesis.
-> - **N8n nodes and telepilot** *(n8n-nodes-telepilot-2)* — Initial deployment setup and Alpine Linux support for Telegram integration nodes.
+> - **Firmware v11 features** *(j-uni-hid)* — Continued firmware development: worked on v11 features including self-reporting, performance profiles, and BLE improvements; also fixed Android reconnection and touch issues.
+> - **Poker CV pipeline** *(poker-cv)* — Developed computer vision pipeline for online poker: achieved high hand detection accuracy, added board card detection, and implemented log reconstruction.
+> - **File-tagging utility maintenance** *(intag2)* — Maintained the file-tagging utility: added PDF support, fixed folder metadata persistence, and automated release workflows.
+> - **On-device LLM Android app** *(ozwil-android)* — Built the on-device LLM Android app: implemented sub-agent architecture, tool routing strategies, and model keep-alive.
+
+> **2024**
+>
+> - **Telegram assistant bot** *(pAssistant)* — Maintained the Telegram assistant bot: added summarization, multi-target sending, and various bug fixes.
