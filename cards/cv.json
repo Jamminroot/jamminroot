@@ -1,24 +1,29 @@
 {
-  "generatedAt": "2026-09-21",
-  "summary": "I continued building the Summit crypto algo trading platform, adding LLM-based judge seats for quorum and sentiment analysis, rebalancing logic, and copy trading features. The platform now integrates AI-driven decision-making with wallet group limits and proposal severity defaults. I also developed the j-uni-hid firmware for ESP32-S3, adding new device variants, USB HID improvements, and BLE performance profiles.\n\nI created the input-driver Windows kernel-mode filter driver for input injection and capture, releasing v1.2 with push-style event delivery and integration tests. On the research side, I conducted extensive crypto price prediction model experiments, auditing defects and establishing a unified stack protocol for model ranking.\n\nI built the JAW agentic worker framework with Mattermost integration and tenant visibility, and the sunflower browser-in-browser infrastructure with permission handling and human input simulation. I worked on several Android projects: the j-tts-android TTS engine with multiple model support and pitch control, and the ozwil-android on-device LLM app with sub-agent delegation and tool routing.\n\nI maintained the intag2 Windows file-tagging utility, adding Vorbis comment support and fixing metadata persistence. I refined the poker-cv computer vision pipeline for online poker, achieving high hand detection accuracy, and developed trading strategies for freqtrade. I also improved my CV generation pipeline with better LLM guidance and project cards.",
+  "generatedAt": "2026-09-28",
+  "summary": "Over the past year, the bulk of the work has been on Summit, a SaaS crypto algo-trading platform with an AI twist. Built out its LLM judge system, introducing a System One judge seat for quorum, sentiment, and wallet-group decisions, and integrated TypeSafe provider capabilities. Also reworked the rebalancing engine, adding calm-liquidity backtesting and an interactive exit simulator for the follows system, while continuously fixing wallet-group and execution logic.\n\nOn the firmware side, advanced the J-UNI-HID project, developing v10 through v13 of the ESP32-S3 mouse and keyboard emulation firmware, adding USB touch, BLE profiles, and self-reporting. Also released v1.2 of the input-driver, a Windows kernel-mode input filter driver, adding push-style event delivery and an integration-test suite.\n\nAcross secondary projects, conducted a deep research audit on the crypto-model-research prediction model, built the agent-harness agentic worker framework with Mattermost integration, and developed the sunflower browser-in-a-browser infrastructure. Also expanded the j-tts-android TTS app with multiple new engines and pitch control, and maintained the intag2 Windows Explorer tagging utility with metadata and CI improvements.",
   "periods": [
     {
       "period": "2026 Sep",
       "items": [
         {
-          "title": "AI-driven crypto algo trading platform",
+          "title": "LLM judge and quorum system",
           "repo": "Jamminroot/summit",
-          "description": "Continued development of the Summit platform, focusing on LLM-based judge seats, quorum logic, and wallet group limits."
+          "description": "Built a System One judge seat for quorum, sentiment, and wallet-group decisions; integrated TypeSafe provider capabilities and improved judge call recording."
         },
         {
           "title": "Agentic worker framework",
           "repo": "Jamminroot/agent-harness",
-          "description": "Built out the Mattermost integration, process feed reading, and tenant visibility model for the JAW agentic worker."
+          "description": "Developed the Mattermost bridge, feed processing, and schema-driven agent communication for the Jamminroot Agentic Worker."
         },
         {
           "title": "Browser-in-browser infrastructure",
           "repo": "Jamminroot/sunflower",
-          "description": "Fixed font pack issues, container adoption, and proxy password handling; added features for browser lifecycle management and font pack splitting."
+          "description": "Reworked font pack delivery, browser lifecycle management, and human-input simulation for the Sunflower remote browser platform."
+        },
+        {
+          "title": "YOLO labeler tooling",
+          "repo": "Jamminroot/yolo-labeler",
+          "description": "Added constraint highlighting, label transparency, and validation features to the on-host YOLO labeler."
         }
       ]
     },
@@ -26,34 +31,24 @@
       "period": "2026 Aug",
       "items": [
         {
-          "title": "Summit platform refinements",
+          "title": "Rebalancing and follows engine",
           "repo": "Jamminroot/summit",
-          "description": "Continued work on Summit: rebalance logic, copy trading fixes, and wallet group veto mechanics."
+          "description": "Implemented calm-liquidity backtesting, interactive exit simulator for follows, and reworked wallet-group veto logic."
         },
         {
-          "title": "Crypto price prediction research",
+          "title": "Crypto model research audit",
           "repo": "Jamminroot/crypto-model-research",
-          "description": "Conducted extensive model research: audited defects, unified stack protocol, and refit runbook for crypto price prediction."
+          "description": "Conducted a full research audit: unified protocol sweep, conformal prediction gates, drift monitoring, and benchmark freezing for the crypto price prediction model."
         },
         {
-          "title": "Agent harness development",
+          "title": "Agent harness core architecture",
           "repo": "Jamminroot/agent-harness",
-          "description": "Developed the agent harness: private chat handling, notification following, and workspace build on Windows."
+          "description": "Built the core agent architecture: situations, canvas, memory search, tiered recommendations, and admin operational dashboard."
         },
         {
-          "title": "File-tagging utility maintenance",
+          "title": "Tagging utility and browser platform",
           "repo": "Jamminroot/intag2",
-          "description": "Maintained the Windows file-tagging utility: fixed settings persistence, Explorer refresh, and backdrop fallback."
-        },
-        {
-          "title": "Browser-in-browser enhancements",
-          "repo": "Jamminroot/sunflower",
-          "description": "Enhanced the browser-in-browser system: added permission prompt answering, human input planning, and deployment improvements."
-        },
-        {
-          "title": "Intag documentation updates",
-          "repo": "Jamminroot/intag",
-          "description": "Updated documentation and changelog for the intag file-tagging project."
+          "description": "Fixed settings persistence and Explorer refresh for Intag2; added tenant fencing and operator panel deployment for the Sunflower browser-in-browser service."
         }
       ]
     },
@@ -61,14 +56,14 @@
       "period": "2026 Jul",
       "items": [
         {
-          "title": "Intag2 audio metadata support",
+          "title": "Intag2 release pipeline",
           "repo": "Jamminroot/intag2",
-          "description": "Continued work on intag2: added Vorbis comment writing for audio files and fixed metadata write failures."
+          "description": "Collapsed the release workflow, added Vorbis comment writing for audio files, and fixed uninstall path issues."
         },
         {
-          "title": "Trading strategy development",
+          "title": "Trading strategy iteration",
           "repo": "Jamminroot/freqtrade_startegies",
-          "description": "Developed new trading strategies: pack-relative reversion and BTC-relative reversion variants."
+          "description": "Added several new 15m trading strategy variants with documented forward-test performance."
         }
       ]
     },
@@ -76,19 +71,19 @@
       "period": "2026 Jun",
       "items": [
         {
-          "title": "CV pipeline improvements",
+          "title": "CV generation pipeline",
           "repo": "Jamminroot/jamminroot",
-          "description": "Enhanced the CV generation pipeline: added LLM model override, improved voice enforcement, and split guidance per place."
+          "description": "Reworked the CV generation pipeline: added dry-run mode, split LLM guidance, refined importance tagging, and improved heatmap rendering."
         },
         {
-          "title": "Strategy iteration",
-          "repo": "Jamminroot/freqtrade_startegies",
-          "description": "Continued strategy development: added EwoDip15m variants with DCA and trend regime."
-        },
-        {
-          "title": "AutoHotKey alternative",
+          "title": "Jolt automation utility",
           "repo": "Jamminroot/jolt",
-          "description": "Built the jolt AutoHotKey alternative: added conditions, rules, stateless themes, and sound actions."
+          "description": "Built the scenario engine for Jolt, a minimal AutoHotKey alternative, with interception support, conditions, and sound actions."
+        },
+        {
+          "title": "Strategy backtesting",
+          "repo": "Jamminroot/freqtrade_startegies",
+          "description": "Added and documented new EwoDip and reversion strategy variants for the freqtrade backtesting suite."
         }
       ]
     },
@@ -96,34 +91,24 @@
       "period": "2026 May",
       "items": [
         {
-          "title": "ESP32-S3 firmware development",
+          "title": "HID firmware and input driver",
           "repo": "Jamminroot/j-uni-hid",
-          "description": "Developed firmware for ESP32-S3: added fire-and-forget USB HID events and 8x8 matrix variant."
+          "description": "Developed v13 firmware for the ESP32-S3 HID device and released v1.2 of the Windows input filter driver with push-style event delivery."
         },
         {
-          "title": "Windows input filter driver",
-          "repo": "Jamminroot/input-driver",
-          "description": "Released v1.2 of the Windows input filter driver: added push-style event delivery and integration-test runner."
-        },
-        {
-          "title": "Android TTS engine",
+          "title": "Android TTS engine expansion",
           "repo": "Jamminroot/j-tts-android",
-          "description": "Worked on Android TTS: added question/exclamation intonation, removed deprecated engines, and added pitch control."
+          "description": "Integrated multiple TTS engines, added pitch control, RuNorm text normalisation, and question/exclamation intonation sliders."
         },
         {
-          "title": "CV pipeline enhancements",
-          "repo": "Jamminroot/jamminroot",
-          "description": "Continued CV pipeline work: added project cards with pulse charts and workflow rebase retries."
-        },
-        {
-          "title": "CV-based aim assist",
+          "title": "Aim assist and e-ink firmware",
           "repo": "Jamminroot/MEMU3",
-          "description": "Refined the CV-based aim assist: switched YOLO inference to DirectML, added bow/flick features, and improved overlay."
+          "description": "Refactored YOLO inference to DirectML for MEMU3, and added Knowledge Base app and FB2 reader to the Biscuit e-ink firmware."
         },
         {
-          "title": "E-ink firmware update",
-          "repo": "Jamminroot/biscuit",
-          "description": "Added knowledge base and FB2 reader to the e-ink firmware."
+          "title": "CV project cards and heatmap",
+          "repo": "Jamminroot/jamminroot",
+          "description": "Added project cards with pulse line charts, smoothed Catmull-Rom curves, and weekly heatmap to the CV README."
         }
       ]
     },
@@ -131,29 +116,14 @@
       "period": "2026 Apr",
       "items": [
         {
-          "title": "Firmware variant drafting",
+          "title": "Firmware and e-reader apps",
           "repo": "Jamminroot/j-uni-hid",
-          "description": "Continued firmware development: drafted v13s8x8 variant and fixed dying/disconnect issues."
+          "description": "Drafted the v13s8x8 firmware variant and fixed USB disconnect issues; added Map app and FB2 encoding fixes to the Papyrix e-reader firmware."
         },
         {
-          "title": "Intag2 encoding fix",
-          "repo": "Jamminroot/intag2",
-          "description": "Fixed desktop.ini encoding for non-ASCII characters and updated changelog generation."
-        },
-        {
-          "title": "E-ink reader firmware",
-          "repo": "Jamminroot/papyrix",
-          "description": "Enhanced e-ink reader firmware: added map app with tile viewer, knowledge base app, and FB2 encoding fixes."
-        },
-        {
-          "title": "Clash.Meta fork",
+          "title": "Proxy client and tagging tool",
           "repo": "Jamminroot/FlCLash",
-          "description": "Updated Clash.Meta fork: re-exposed APIs and added XHTTP transport support."
-        },
-        {
-          "title": "Clash.Meta API exposure",
-          "repo": "Jamminroot/Clash.Meta",
-          "description": "Re-exposed APIs for FlClash."
+          "description": "Added XHTTP transport support to the Flutter Clash.Meta client and fixed desktop.ini encoding for non-ASCII characters in Intag2."
         }
       ]
     },
@@ -161,24 +131,24 @@
       "period": "2025",
       "items": [
         {
-          "title": "Firmware v11 features",
+          "title": "Summit platform foundation",
+          "repo": "Jamminroot/summit",
+          "description": "Continued building the core Summit crypto trading platform, laying groundwork in LLM integration, wallet management, and execution logic."
+        },
+        {
+          "title": "HID firmware development",
           "repo": "Jamminroot/j-uni-hid",
-          "description": "Continued firmware development: worked on v11 features including self-reporting, performance profiles, and BLE improvements; also fixed Android reconnection and touch issues."
+          "description": "Developed firmware versions v10 through v12 for the ESP32-S3, adding USB touch, BLE profiles, dual-core support, and self-reporting."
         },
         {
-          "title": "Poker CV pipeline",
-          "repo": "Jamminroot/poker-cv",
-          "description": "Developed computer vision pipeline for online poker: achieved high hand detection accuracy, added board card detection, and implemented log reconstruction."
-        },
-        {
-          "title": "File-tagging utility maintenance",
-          "repo": "Jamminroot/intag2",
-          "description": "Maintained the file-tagging utility: added PDF support, fixed folder metadata persistence, and automated release workflows."
-        },
-        {
-          "title": "On-device LLM Android app",
+          "title": "Mobile and desktop applications",
           "repo": "Jamminroot/ozwil-android",
-          "description": "Built the on-device LLM Android app: implemented sub-agent architecture, tool routing strategies, and model keep-alive."
+          "description": "Built the Ozwil Android LLM app with sub-agent architecture, developed the poker-cv computer vision pipeline, and expanded the intag2 file-tagging utility with PDF support and MS Store publishing."
+        },
+        {
+          "title": "Tooling and infrastructure",
+          "repo": "Jamminroot/auto-claude",
+          "description": "Built the auto-claude autonomous coding agent, the jaxon code intelligence engine, the freqtrade multi-bot Telegram interface, and maintained various n8n nodes and dotfiles."
         }
       ]
     },
@@ -186,9 +156,9 @@
       "period": "2024",
       "items": [
         {
-          "title": "Telegram assistant bot",
+          "title": "Bot maintenance",
           "repo": "Jamminroot/pAssistant",
-          "description": "Maintained the Telegram assistant bot: added summarization, multi-target sending, and various bug fixes."
+          "description": "Maintained the pAssistant Telegram bot and the .NET ChatGPT Telegram bot with general updates and bug fixes."
         }
       ]
     }
